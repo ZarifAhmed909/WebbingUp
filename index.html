@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML 5 Boilerplate</title>
+    <style>
+        body{
+            text-align: center;
+            background-image: url(https://assets.dnainfo.com/generated/photo/2014/08/brooklyn-tech-1409158575.JPG/extralarge.jpg);
+            background-repeat: no-repeat;
+            background-size: 1920px 1080px;
+        }
+        button{
+            background-color:blue ;
+            color: white;
+            border:solid;
+            border-color:red;
+            border-style: dashed;
+            padding: 15px 32px;
+        }
+        .skibidi{
+            background: rgba(214, 232, 227, 0.7);
+            border:solid;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="skibidi">
+        <h2 id="Sigma" class="whiter">Number of Students Entered: 0</h2>
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="lyfeSaver" class="whiter">Past Saves: </p>
+   </div>
+
+    <script>
+        let count = 0;
+        let sigma = document.getElementById("Sigma")
+        function increment(){
+            count++
+            sigma.innerHTML="Number of Students Entered: "+count;
+        }
+        function save(){
+            let initializer = document.getElementById("lyfeSaver")
+            initializer.innerHTML = initializer.innerHTML+ " - " + count
+            count = 0;
+            sigma.innerHTML="Number of Students Entered "+count;
+        }
+
+    </script>
+  </body>
+</html> 
